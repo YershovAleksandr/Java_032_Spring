@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Controller {
     @GetMapping("/")
     public String index(){
-        return "<h1>Хуй</h1><br /><a href=\"/1\">Пизда</a><a href=\"/2\">Жопа</a>";
+        return "<h1>Хуй</h1><br /><a href=\"/1\">Пизда</a><br /><a href=\"/2\">Жопа</a>";
     }
     @GetMapping("/1")
     public String index1(){
