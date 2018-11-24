@@ -1,6 +1,8 @@
 package app;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -16,6 +18,10 @@ public class Controller {
     @GetMapping("/2")
     public String index2(){
         return "<h1>Жопа</h1>";
+    }
+    @RequestMapping("/length")
+    public String index42(@RequestParam(value = "cm", defaultValue = "42") String cm){
+        return String.format("<h1>Длинна: %s</h1>", cm);
     }
 
 }
